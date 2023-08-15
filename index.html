@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="border-2 border-red-500 h-screen bg-gradient-to-r from-fuchsia-300 to-fuchsia-800">
+
+    <header id="mainHeader" class="border-4 border-red-500 h-1/3 flex flex-col justify-center">
+        <h1 id="mainHeading" class="text-8xl font-bold text-center">Your <span class="text-violet-950">Money</span>
+            is Your Asset</h1>
+    </header>
+    <main id="mainSection" class="border-4 border-red-500 h-2/3 px-72">
+        <section class="grid grid-cols-3 gap-7 border-4 border-red-500 h-1/2 py-10">
+            <div class="bg-green-600 p-12 flex flex-col justify-between rounded-3xl">
+                <h3 id="depositText" class="text-white font-semibold text-5xl">Deposit</h3>
+                <h2 id="depositValue" class="text-white font-semibold text-6xl">$00</h2>
+            </div>
+            <div class="bg-yellow-700 p-12 flex flex-col justify-between rounded-3xl">
+                <h3 id="withdrawText" class="text-white font-semibold text-5xl">Withdraw</h3>
+                <h2 id="withdrawValue" class="text-white font-semibold text-6xl">$00</h2>
+            </div>
+            <div class="bg-violet-500 p-12 flex flex-col justify-between rounded-3xl">
+                <h3 id="balanceText" class="text-white font-semibold text-5xl">Balance</h3>
+                <h2 id="balanceValue" class="text-white font-semibold text-6xl">$00</h2>
+            </div>
+        </section>
+        <section class="grid grid-cols-2 gap-10 border-4 border-red-500 h-1/2 py-10">
+            <div class="bg-purple-500 text-white p-8 flex flex-col justify-between items-center rounded-3xl">
+                <h3 id="depositFieldText" class=" text-white text-4xl font-bold p-2 w-full">Please Deposit</h3>
+                <input type="text" name="" id="depositField" placeholder="$ Amount You want to deposit"
+                    class="text-black w-full p-2 rounded-2xl">
+                <button type="button"
+                    class="bg-orange-700 text-white font-bold text-3xl rounded-2xl p-2 w-1/2 text-center">Deposit</button>
+            </div>
+            <div class="bg-sky-700 text-white p-8 flex flex-col justify-between items-center rounded-3xl">
+                <h3 id="withDrawFieldText" class=" text-white text-4xl font-bold p-2 w-full">Please Withdraw</h3>
+                <input type="text" name="" id="withdrawField" placeholder="$ Amount You want to withdraw"
+                    class="text-black w-full p-2 rounded-2xl">
+                <button type="button"
+                    class="bg-orange-700 text-white font-bold text-3xl rounded-2xl p-2 w-1/2 text-center">Withdraw</button>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
