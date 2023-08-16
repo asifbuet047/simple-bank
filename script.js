@@ -33,9 +33,8 @@ function replaceContentTextWithId(id, text) {
 
 
 
-if (window.location.pathname.includes('index')) {
+if (window.location.href.includes('simple-bank')) {
     const submitButton = window.document.getElementById('submitButton');
-    console.log(submitButton);
     submitButton.addEventListener('click', function () {
         var mail = getInputFieldValueById('mailField');
         var pass = getInputFieldValueById('passwordField');
@@ -47,7 +46,7 @@ if (window.location.pathname.includes('index')) {
 
     });
 
-} else if (window.location.pathname.includes('bankboard')) {
+} else if (window.location.href.includes('bankboard')) {
     let currentBalance = checkAndReturnIfNumber(getContentTextById('balanceValue'));
 
     const depositButton = window.document.getElementById('depositButton');
