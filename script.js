@@ -39,7 +39,7 @@ if (window.location.href.includes('simple-bank')) {
         var mail = getInputFieldValueById('mailField');
         var pass = getInputFieldValueById('passwordField');
         if (matchWithCredentials([mail, pass])) {
-            window.location.href = '/bankboard.html';
+            window.location.href = 'bankboard.html';
         } else {
             window.alert('Mail or pass mismatch with daabase');
         }
