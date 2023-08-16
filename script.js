@@ -82,6 +82,8 @@ if (window.location.pathname.includes('index')) {
             }
         }
     });
+} else {
+    window.alert("Some Error occurs");
 }
 
 
