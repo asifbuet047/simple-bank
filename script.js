@@ -35,6 +35,7 @@ function replaceContentTextWithId(id, text) {
 
 if (window.location.pathname.includes('index')) {
     const submitButton = window.document.getElementById('submitButton');
+    console.log(submitButton);
     submitButton.addEventListener('click', function () {
         var mail = getInputFieldValueById('mailField');
         var pass = getInputFieldValueById('passwordField');
