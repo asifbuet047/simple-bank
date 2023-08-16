@@ -47,7 +47,8 @@ if (window.location.pathname.includes('index')) {
     });
 
 } else if (window.location.pathname.includes('bankboard')) {
-    var currentBalance = checkAndReturnIfNumber(getContentTextById('balanceValue'));
+    let currentBalance = checkAndReturnIfNumber(getContentTextById('balanceValue'));
+
     const depositButton = window.document.getElementById('depositButton');
     depositButton.addEventListener('click', function () {
         let depositValue = checkAndReturnIfNumber(getInputFieldValueById('depositField'));
@@ -57,11 +58,29 @@ if (window.location.pathname.includes('index')) {
             console.log(depositValue);
             replaceContentTextWithId('depositValue', depositValue.toString());
             currentBalance = currentBalance + depositValue;
-            console.log('sum of total deposit', currentBalance);
+            console.log('Balance after deposit', currentBalance);
             replaceContentTextWithId('balanceValue', currentBalance.toString());
         }
     });
 
+    const withdrawButton = window.document.getElementById('withdrawButton');
+    withdrawButton.addEventListener('click', function () {
+        let withdrawValue = checkAndReturnIfNumber(getInputFieldValueById('withdrawField'));
+        if (withdrawValue == false) {
+            window.alert('Please input valid number');
+        } else {
+            console.log(withdrawValue);
+            replaceContentTextWithId('withdrawValue', withdrawValue.toString());
+            currentBalance = currentBalance - withdrawValue;
+            if (currentBalance >= 0) {
+                console.log('Balance after withdraw', currentBalance);
+                replaceContentTextWithId('balanceValue', currentBalance.toString());
+            } else {
+                replaceContentTextWithId('balanceValue', "00");
+                window.alert("You cant withdraw more than Your balance");
+            }
+        }
+    });
 }
 
 
